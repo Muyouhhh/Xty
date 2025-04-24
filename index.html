@@ -1,0 +1,47 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>别踩信标</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <div class="settings-panel">
+            <div class="setting-group">
+                <label>游戏模式：
+                    <select id="gameMode">
+                        <option value="time">时间模式</option>
+                        <option value="score">得分模式</option>
+                    </select>
+                </label>
+            </div>
+            <div class="setting-group">
+                <label>游戏时长：<input type="number" id="gameTime" value="60" min="30"></label>
+                <label>目标分数：<input type="number" id="targetScore" value="30" min="10"></label>
+            </div>
+            <button id="startBtn" class="start-btn">开始游戏</button>
+        </div>
+        <!-- 在游戏页面的任意位置添加按钮 -->
+        <button id="initAudioButton" class="audio-init-btn">点击初始化音频</button>
+        <div class="game-info">
+            <div class="info-item">
+                <span>当前得分：</span>
+                <span id="currentScore">0</span>
+            </div>
+            <div class="info-item">
+                <span id="timeLabel">剩余时间：</span>
+                <span id="timeLeft">60</span>秒
+            </div>
+        </div>
+
+        <div id="gameBoard" class="game-board"></div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>    
